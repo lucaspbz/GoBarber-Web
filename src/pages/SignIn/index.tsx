@@ -51,7 +51,11 @@ const SignIn: React.FC = () => {
 
           formRef.current?.setErrors(errors);
         }
-        addToast();
+        addToast({
+          type: 'error',
+          title: 'Erro na autenticação',
+          description: 'Ocorreu um erro ao fazer login, cheque as credenciais.',
+        });
       }
     },
     [signIn, addToast]
@@ -78,7 +82,7 @@ const SignIn: React.FC = () => {
           <a href="forgot">Esqueci minha senha</a>
         </Form>
 
-        <a href="#">
+        <a href="http://localhost:3000/">
           <FiLogIn />
           Criar conta
         </a>
