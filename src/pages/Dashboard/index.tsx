@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { format, isAfter, isToday } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
+import { Link } from 'react-router-dom';
 
 import DayPicker, { DayModifiers } from 'react-day-picker'
 import 'react-day-picker/lib/style.css'
@@ -128,7 +129,9 @@ const Dashboard: React.FC = () => {
 
             <div>
               <span>Bem-vindo</span>
-              <strong>{user.name}</strong>
+              <Link to='/profile'>
+                <strong>{user.name}</strong>
+              </Link>
             </div>
           </Profile>
 
