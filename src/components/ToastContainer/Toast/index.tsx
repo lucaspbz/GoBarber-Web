@@ -39,11 +39,11 @@ const Toast: React.FC<ToastProps> = ({ message, style }) => {
       style={style}
       key={message.id}
       type={message.type}
-      hasDescription={!!message.description}
+      hasDescription={!!message.description ? 1 : 0}
     >
-      {icons[message.type || 'info']}
+      { icons[message.type || 'info']}
 
-      <div>
+      < div >
         <strong>{message.title}</strong>
         {message.description && <p>{message.description}</p>}
 
@@ -55,8 +55,8 @@ const Toast: React.FC<ToastProps> = ({ message, style }) => {
         >
           <FiXCircle size={18} />
         </button>
-      </div>
-    </Container>
+      </div >
+    </Container >
   );
 };
 
