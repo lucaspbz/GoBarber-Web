@@ -13,7 +13,9 @@ import logoImg from '../../assets/logo.svg';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-import { Container, Content, Background, AnimationContainer } from './styles';
+import {
+  Container, Content, Background, AnimationContainer,
+} from './styles';
 import api from '../../services/api';
 
 interface ForgotPasswordFormData {
@@ -78,6 +80,7 @@ const ForgotPassword: React.FC = () => {
     <Container>
       <Content>
         <AnimationContainer>
+
           <img src={logoImg} alt="GoBarber" />
 
           <Form ref={formRef} onSubmit={handleSubmit}>
